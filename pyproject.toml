@@ -1,11 +1,12 @@
 [build-system]
 requires = [
-    "maturin"
+    "maturin>=1.0,<2.0"
 ]
 build-backend = "maturin"
 
 [tool.maturin]
 python-source = "pydeeptools"
+exclude = ["pydeeptools/deeptools/test/**/*"]
 module-name = "deeptools.hp"
 bindings = "pyo3"
 
@@ -86,3 +87,5 @@ plotProfile = "deeptools.plotProfile:main"
 bamCoverage2 = "deeptools.bamCoverage2:main"
 bamCompare2 = "deeptools.bamCompare2:main"
 computeMatrix2 = "deeptools.computeMatrix2:main"
+alignmentSieve2 = "deeptools.alignmentSieve2:main"
+multiBamSummary2 = "deeptools.multiBamSummary2:main"
